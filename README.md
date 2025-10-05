@@ -1,21 +1,32 @@
-<h1 align="center">Sanket Sharma</h1>  
-<p align="center"><em>Developer · Finance & Economic Systems Thinker · BDE & Product Builder</em></p>
+<h1 align="center">Sanket Sharma</h1>
+<p align="center"><em>Engineer · Financial Systems Thinker · Product Strategist</em></p>
+
+<p align="center">
+  <a href="https://github.com/signaloninternet">GitHub</a> •
+  <a href="https://www.linkedin.com/in/signalinternet/">LinkedIn</a> •
+  <a href="mailto:sanket@signaloninternet.com">Email</a> •
+  <a href="https://www.signaloninternet.com/">Website</a>
+</p>
 
 ---
 
-## 📊 GitHub Stats & Activity
+## 📊 GitHub Analytics
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&rank_icon=percentile" />
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=transparent&hide_border=true&langs_count=8" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&rank_icon=percentile" alt="Sanket's GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=transparent&hide_border=true&langs_count=8" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=signaloninternet&theme=transparent&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=signaloninternet&theme=transparent&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=signaloninternet&theme=flat&no-frame=true&column=6&margin-w=10" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=signaloninternet&theme=transparent" alt="Summary Card" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=signaloninternet&theme=flat&no-frame=true&column=6&margin-w=10" alt="GitHub Trophies" />
 </p>
 
 <p align="center">
@@ -24,70 +35,83 @@
 
 ---
 
-## 🧰 Languages & Stack Usage
+## 🧰 Languages Ranked by Real Usage
 
-Here are the languages you’ve used in your repos, ranked by usage:
-
-| Rank | Language      | % / Relative Usage* |
-|------|----------------|----------------------|
-| 1    | JavaScript / TypeScript | — |
-| 2    | Python         | — |
-| 3    | Vue.js / JavaScript frameworks | — |
-| 4    | C++ / lower-level / scripts | — |
-
-\* (These are from GitHub stats “top languages” — the exact percentages are shown in the top-langs card above.)
-
-*You can optionally list specific lines / commits per language if you fetch them via GitHub API.*
+| Rank | Language / Framework | Usage Context |
+|------|----------------------|----------------|
+| 1 | TypeScript / JavaScript | Full-stack & Frontend Development |
+| 2 | React.js / React Native | Core for Web + Mobile UI |
+| 3 | Remix.js / Next.js | Scalable & SEO-optimized sites |
+| 4 | Python | Data analytics, scripting, automation |
+| 5 | SCSS / TailwindCSS | Styling & responsive UI |
+| 6 | Vue.js | Experimental pushes & interface logic |
+| 7 | C++ / Java | Foundation in OOP & DSA |
 
 ---
 
-## 💼 Roles & Professional Experience
+## 🚀 Featured Projects
 
-- **Business Development Executive (BDE), PhonePe**  
-  Led adoption efforts, drove client acquisition, and grew product usage in key markets.  
-- **Frontend & Full-Stack Developer**  
-  Across multiple projects (below), I’ve built features, maintained codebases, and optimized performance.  
-
----
-
-## 📈 Projects & Works
-
-Here are some of the core projects I’ve built:
-
-| Project | Description | Stack / Key Highlights |
-|---|---|---|
-| **Stash.market** | A form-based no-code website builder — users can create e-commerce / landing sites easily. | Remix.js, SCSS, Supabase, SEO optimizations |
-| **SuprBuy** | A real-time price aggregator across e-commerce platforms (scraping, APIs). | Next.js, Puppeteer, data pipelines |
-| **Swipify** | Tool to clean up your gallery by “swiping away” unwanted images (like Tinder). | Frontend UI, image handling, React / JavaScript |
-| **Studyverse** | Focus / study tool / real-time platform for students with features like sessions, timers, dashboards. | React, Node.js / backend, full-stack integrations |
+| Project | Description | Stack / Highlights |
+|----------|--------------|--------------------|
+| [**Stash.market**](https://www.stash.market/) | No-code, form-based site builder for creators to launch products and manage stores without writing code. | Remix.js · Supabase · SCSS · SEO |
+| [**SuprBuy**](https://www.suprbuy.com/) | Real-time web scraping platform comparing prices across Indian e-commerce sites. | Next.js · Puppeteer · SCSS |
+| **Swipify** | AI-driven image decluttering app — swipe right to keep, left to delete; inspired by Tinder’s UX. | React Native · Expo Go · Local Storage APIs |
+| **Studyverse** | Real-time focus app for students integrating video/audio study rooms and gamified productivity tracking. | React.js · Tailwind · Clerk · Stream |
 
 ---
 
-## 🔍 Interests & Research
+## 💼 Professional Experience
 
-- ⚖️ I’m deeply interested in **economics, finance, and systemic measurements**  
-- I’m working on a new model to **rethink how countries’ wealth / progress is quantified** — an alternative to GDP, factoring in technology, knowledge, sustainability, and human capital  
-- I often write essays or short papers on these topics and intend to publish my framework in time  
+**Frontend Engineer & React Native Developer — OceanWaveWeb**  
+• Delivered 12+ high-performance websites with SEO scores of 100/100 on Google PageSpeed.  
+• Built a multi-app restaurant suite (11+ branches) using React Native, Supabase, and Expo Go.  
+
+**Frontend Developer — CyberFlux**  
+• Led UI for NeuraSim.Health, featured on *Shark Tank India*.  
+• Improved load performance by 30% through optimized React pipelines.  
+
+**Freelance Developer & Sales Lead — mchdev.studio**  
+• Designed 9-page corporate website using Remix.js and Framer Motion.  
+• Closed ₹2,50,000+ in client deals, managing full-cycle product delivery.  
+
+**Business Development Executive — PhonePe**  
+• Increased client adoption by 70% in two weeks post-release.  
+• Achieved 21% growth in sector revenue through strategic partnerships.
 
 ---
 
-## 🎧 Extracurricular & Personal Touches
+## 🧠 Economics & Financial Research
 
-- I’ve also experimented with **Vue.js lately** — you’ll see pushes in those repos  
-- (Optional) **Spotify / listening stats** — you can integrate with e.g. `spotify-readme` tools to show your top tracks / artists  
-- I blend **technical product building** with **financial & economic thinking** — I want my output to not just be functional, but meaningful at macro scale  
+My interest lies in **rethinking macroeconomic indicators** — developing a framework that redefines how a country's progress is measured.  
+This model aims to move **beyond GDP**, incorporating variables like:  
+- Knowledge capital & innovation output  
+- Technological adoption curves  
+- Environmental & social sustainability  
+- Human happiness & opportunity creation  
+
+> “True wealth isn’t GDP growth — it’s the compounding of collective human potential.”
 
 ---
 
-## 📬 Connect With Me
+## 🎧 Spotify Insights
 
 <p align="center">
-  <a href="mailto:your_email_here"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/signaloninternet"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://github.com/signaloninternet"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://open.spotify.com/user/signaloninternet">
+    <img src="https://spotify-recently-played-readme.vercel.app/api?user=signaloninternet&count=5" alt="Spotify Recently Played" />
+  </a>
 </p>
 
 ---
 
-> “To build new measures is to build new mindsets — we need metrics that reflect human flourishing, not just output.”  
+## 🧩 Core Philosophy
 
+> “Precision in logic mirrors precision in life.  
+>  I design systems — whether in code, finance, or thought — that aim to endure.”
+
+---
+
+<p align="center">
+  <a href="mailto:sanket@signaloninternet.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/signalinternet/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://github.com/signaloninternet"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+</p>
