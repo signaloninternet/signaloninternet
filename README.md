@@ -96,7 +96,7 @@ This model aims to move **beyond GDP**, incorporating variables like:
 ## 🎧 Spotify Insights
 
 <p align="center">
-  <a href="https://open.spotify.com/user/signaloninternet">
+  <a href="https://open.spotify.com/user/signalinternet">
     <img src="https://spotify-recently-played-readme.vercel.app/api?user=signaloninternet&count=5" alt="Spotify Recently Played" />
   </a>
 </p>
