@@ -91,22 +91,11 @@ This model aims to move **beyond GDP**, incorporating variables like:
 
 > “True wealth isn’t GDP growth — it’s the compounding of collective human potential.”
 
----
-
-## 🎧 Spotify Insights
-
-<p align="center">
-  <a href="https://open.spotify.com/user/signalinternet">
-    <img src="https://spotify-recently-played-readme.vercel.app/api?user=signaloninternet&count=5" alt="Spotify Recently Played" />
-  </a>
-</p>
-
----
 
 ## 🧩 Core Philosophy
 
-> “Precision in logic mirrors precision in life.  
->  I design systems — whether in code, finance, or thought — that aim to endure.”
+> “Jack of All trades, master in none.  
+>  But I am the jack of spades, better than other 3 kings :)”
 
 ---
 
