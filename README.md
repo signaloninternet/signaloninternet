@@ -80,7 +80,7 @@ I mostly live in TypeScript and Python. On the frontend it's React, Next.js, and
 ## 💼 Where I've worked
 
 ### OceanWaveWeb LLC | Software Engineer
-**Mar 2025 to Nov 2025 · Remote, US**
+**Mar 2025 to Present · Remote, US**
 
 This was the most intense stretch of building I've done. I was the only engineer. No senior to ask questions, no one to review architecture decisions, no team to split the work. Just me and two very large, very real platforms that needed to be designed and shipped.
 
@@ -132,7 +132,7 @@ On top of these two platforms I also delivered 12+ production websites for clien
 ---
 
 ### Mediamaxxing LLC | Software Engineer
-**Nov 2025 to Present · Remote, US**
+**Nov 2025 to February 2025 · Remote, US**
 
 I joined to help build AI tooling for content workflows. The main thing I built was a video and content editing pipeline powered by Gemini API that cut manual processing time by 60%. I also designed a content quality and spam scoring engine for TikTok, YouTube, and Instagram. It looks at engagement patterns, metadata signals, and sentiment to flag low-quality or inauthentic content. Beyond that I've been in the trenches fixing production issues (1,400+ closed) and pushing code constantly (300+ PRs merged), while also working on Redis caching and AWS optimization to keep the platform fast under load.
 
