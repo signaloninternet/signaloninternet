@@ -14,7 +14,7 @@
 
 ## Hey, I'm Sanket
 
-I'm 20, currently in my pre-final year studying CS with a focus on AI and ML. But honestly I've been building things since long before college started, websites, apps, backends, payment systems, whatever the problem needed.
+I'm 21, currently in my pre-final year studying CS with a focus on AI and ML. But honestly I've been building things since long before college started, websites, apps, backends, payment systems, whatever the problem needed.
 
 Over the last 4 years I've shipped real software for real clients. Not side projects that live on localhost. Actual production systems with real users, real payments, and real consequences when something breaks. I've worked with US-based startups as a contract engineer while still being a full-time student, and I've built some fairly complex platforms entirely on my own from architecture to deployment.
 
