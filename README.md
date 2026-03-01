@@ -22,26 +22,37 @@ I'm not looking for a place to learn the basics. I'm looking for a team working 
 
 ## 📊 GitHub Stats
 
-<!-- Stats + Languages side by side -->
+<!-- Streak + Top Languages side by side -->
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&rank_icon=percentile" alt="Sanket's GitHub Stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+  <img width="49%" src="https://streak-stats.demolab.com?user=signaloninternet&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&fire=FF6B35&ring=0891b2&currStreakLabel=0891b2" alt="GitHub Streak" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&hide=html" alt="Top Languages" />
 </p>
 
-<!-- Streak -->
+<!-- Activity graph full width -->
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=signaloninternet&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=signaloninternet&theme=tokyo-night&hide_border=true&area=true&custom_title=Daily%20Contribution%20Activity" alt="Contribution Graph" />
 </p>
 
-<!-- Contribution activity graph -->
+<!-- Tech stack badges -->
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=signaloninternet&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity%20Graph" alt="Contribution Graph" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 </p>
-
-<!-- Shields badges — always work -->
 <p align="center">
-  <img src="https://img.shields.io/github/followers/signaloninternet?style=for-the-badge&logo=github&label=Followers&color=0891b2&labelColor=1c1917" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/signaloninternet?style=for-the-badge&logo=github&label=Stars&color=0891b2&labelColor=1c1917" alt="Stars" />
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/Remix-000000?style=for-the-badge&logo=remix&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini_API-4285F4?style=for-the-badge&logo=google&logoColor=white" />
 </p>
 
 ---
