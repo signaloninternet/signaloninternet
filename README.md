@@ -127,17 +127,144 @@ Mobile app that uses on-device ML to help users clean their camera rolls. Tinder
 
 ## 💼 Experience
 
-**Software Engineer — Mediamaxxing LLC** *(Nov 2025 – March 2026 · Remote, US)*  
-Built AI-powered video editing tools using Gemini API (60% reduction in manual processing time). Designed a spam and content quality scoring engine for TikTok, YouTube, and Instagram. 1,400+ production issues resolved, 300+ PRs merged.
+---
 
-**Software Engineer — OceanWaveWeb LLC** *(Mar 2025 – Present · Remote, US)*  
-Architected a full CRM platform with auto-generated APIs, RBAC, real-time collaboration, and AI meeting summaries. Delivered 12+ production sites at 95–100 PageSpeed scores. Built a multi-tenant restaurant ordering system across 11+ live branches.
+### 🏢 Software Engineer — OceanWaveWeb LLC
+**Mar 2025 – Nov 2025 · Remote, US · Solo Architect & Developer**
 
-**Frontend Developer — CyberFlux Enterprises** *(Nov 2024 – Mar 2025 · Remote)*  
-Built UI for NeuraSim.Health, featured on Shark Tank India. Reduced load time by 30%.
+> Sole engineer responsible for designing, building, and shipping two full production platforms from scratch — alongside 12+ client websites. No team. No handoffs. End-to-end ownership of architecture, backend, frontend, mobile, payments, and infra.
 
-**Business Development Executive — PhonePe** *(Feb 2023 – Aug 2023 · On-site)*  
-Drove 21% revenue growth in sector. 90% client satisfaction, 100% adoption rate on new product launches within two weeks.
+---
+
+#### 🧠 OceanWave Brain — Agency CRM & Client Operating System
+
+A multi-sided agency platform built on React/Vite + Supabase that replaces scattered tools with one unified system. Four distinct roles (admin, super_admin, employee, client) each with isolated access enforced at the database level via RLS — not just the UI.
+
+**What it does:**
+
+| Surface | Features |
+|---------|---------|
+| Agency Internal | CRM overview, projects & workspaces, task assignment, time tracking, team roster, sales pipeline |
+| AI Layer | Gemini-powered insights for task prioritization and finance summaries |
+| Client Portal | Project updates, invoice/billing views, feedback submission |
+| Video | Stream-powered real-time team huddles |
+| Public API | Edge Functions (`public-api`, `platform-public-api`) expose client profile/app content by username — external websites pull live data as a headless CMS |
+
+**Stripe Connect — full implementation:**
+- Seller onboarding + status checks + dashboard login via `stripe-connect`
+- Public checkout by order ID (`/checkout/:orderId`) via `stripe-payment`
+- Webhook-based payment status sync + automated fee transfer logic via `stripe-webhook`
+
+**Platform Payments API — separate external-facing infrastructure:**
+- Business onboarding + API key management + subscription billing (`platform-business`)
+- API-key authenticated payment intent creation and status polling (`platform-payments`)
+- Webhook processing for third-party business apps (`platform-webhook`)
+
+```
+┌─────────────────────┐     ┌─────────────────────┐     ┌──────────────────────┐
+│   Agency Dashboard  │     │   Client Portal      │     │  External Websites   │
+│   React / Vite      │     │   React / Vite       │     │  ("Skins")           │
+│                     │     │                      │     │                      │
+│  CRM · Tasks        │     │  Projects · Invoices │     │  Fetch content by    │
+│  Time · Pipeline    │     │  Feedback · Updates  │     │  username via        │
+│  AI Insights        │     │                      │     │  public Edge API     │
+└────────┬────────────┘     └──────────┬───────────┘     └──────────┬───────────┘
+         │                             │                             │
+         └─────────────────────────────┼─────────────────────────────┘
+                                       │
+                           ┌───────────▼────────────┐
+                           │  Supabase               │
+                           │  PostgreSQL · Auth      │
+                           │  RLS · Edge Functions   │
+                           │  Realtime · Storage     │
+                           └───────────┬─────────────┘
+                                       │
+                           ┌───────────▼────────────┐
+                           │  Stripe Connect         │
+                           │  Platform Payments API  │
+                           │  Stream Video           │
+                           └────────────────────────┘
+```
+
+**Stack:** `React` `Vite` `TypeScript` `Supabase` `PostgreSQL` `RLS` `Stripe Connect` `Gemini API` `Stream` `Twilio` `SendGrid`
+
+---
+
+#### 🚗 Valet Parking Operations Platform — *Live in production at a restaurant*
+
+A three-sided operations platform that replaces pen-and-paper valet with a fully digital, real-time system. Built and shipped completely solo.
+
+**Three surfaces, one backend:**
+
+| Surface | Stack | Purpose |
+|---------|-------|---------|
+| Staff Mobile App | Expo · React Native | Shift management, check-in, zone/spot/key assignment, queue, checkout |
+| Customer Portal `/t/{token}` | Next.js | Guests request car, track status, pay digitally — no login needed |
+| Admin Console | Next.js | Locations, staff, rates, zones, spots, shifts, audit log, finance reconciliation |
+
+**Ticket lifecycle — enforced at the DB level, not the UI:**
+```
+[active] → staff assigns zone, spot, key slot
+   ↓
+[requested] → guest requests car via portal
+   ↓
+[ready] → car retrieved, payment collected
+   ↓
+[completed] → invoice finalized, shift reconciled
+
+(any state) → [cancelled]
+```
+Every transition writes a `ticket_events` record. Full audit trail, zero data loss.
+
+**Backend architecture:**
+- **15+ table schema:** `tickets`, `invoices`, `payments`, `shifts`, `parking_zones`, `parking_spots`, `key_slots`, `ticket_events`, `vehicles`, `profiles`, `locations`, `staff_locations` + payment link tables
+- **Triggers:** Auto-generate ticket defaults, invoice rows on creation, invoice total rollups
+- **RLS:** Staff are automatically scoped to their assigned location — no application-layer filtering needed
+- **Revenue view:** `v_revenue_daily` powers real-time finance reconciliation in admin console
+
+**Payment & notification pipeline (single Edge Function):**
+```
+create-payment → generate link → shorten to /p/{code}
+      ↓
+send via WhatsApp / SMS (Twilio) / Email (SendGrid)
+      ↓
+log to payment_link_notifications
+      ↓
+/pay/{code} hosted page handles Stripe client_secret confirmation
+```
+
+**Stack:** `React Native` `Expo` `Next.js` `TypeScript` `Supabase` `PostgreSQL` `RLS` `Edge Functions` `Twilio` `SendGrid` `Stripe`
+
+---
+
+#### 📦 Additional Deliverables at OceanWaveWeb
+- **12+ production websites** using Next.js + TypeScript — consistently achieving **95–100 Google PageSpeed scores**
+- **Multi-tenant restaurant ordering system** in React Native + Expo + Supabase, deployed across **11+ live branches**
+
+---
+
+### 🤖 Software Engineer — Mediamaxxing LLC
+**Nov 2025 – Present · Remote, US**
+
+- Built AI-powered video and content editing tools using **Gemini API** — reduced manual content processing time by **60%**
+- Designed an AI-based spam and content quality scoring engine for TikTok, YouTube, and Instagram using engagement metrics, metadata signals, and sentiment analysis
+- Resolved **1,400+ production issues** and delivered **300+ merged PRs**; implemented Redis caching on AWS to improve platform throughput and latency
+
+---
+
+### ⚡ Frontend Developer — CyberFlux Enterprises
+**Nov 2024 – Mar 2025 · Remote, India**
+
+- Built reusable React component library for a custom apparel design platform; reduced page load times by **30%**
+- Contributed to **NeuraSim.Health** — featured on **Shark Tank India**
+
+---
+
+### 📱 Business Development Executive — PhonePe
+**Feb 2023 – Aug 2023 · Thane, India · On-site**
+
+- Drove **21% revenue growth** in sector through strategic partnerships
+- Achieved **90% client satisfaction** and **100% new product adoption** within two weeks of launch
 
 ---
 
