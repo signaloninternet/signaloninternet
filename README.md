@@ -127,10 +127,10 @@ Mobile app that uses on-device ML to help users clean their camera rolls. Tinder
 
 ## 💼 Experience
 
-**Software Engineer — Mediamaxxing LLC** *(Nov 2025 – Present · Remote, US)*  
+**Software Engineer — Mediamaxxing LLC** *(Nov 2025 – March 2026 · Remote, US)*  
 Built AI-powered video editing tools using Gemini API (60% reduction in manual processing time). Designed a spam and content quality scoring engine for TikTok, YouTube, and Instagram. 1,400+ production issues resolved, 300+ PRs merged.
 
-**Software Engineer — OceanWaveWeb LLC** *(Mar 2025 – Nov 2025 · Remote, US)*  
+**Software Engineer — OceanWaveWeb LLC** *(Mar 2025 – Present · Remote, US)*  
 Architected a full CRM platform with auto-generated APIs, RBAC, real-time collaboration, and AI meeting summaries. Delivered 12+ production sites at 95–100 PageSpeed scores. Built a multi-tenant restaurant ordering system across 11+ live branches.
 
 **Frontend Developer — CyberFlux Enterprises** *(Nov 2024 – Mar 2025 · Remote)*  
