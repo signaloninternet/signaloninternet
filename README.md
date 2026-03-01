@@ -22,51 +22,26 @@ I'm not looking for a place to learn the basics. I'm looking for a team working 
 
 ## 📊 GitHub Stats
 
-<!-- Row 1: Main stats + Top Languages -->
+<!-- Stats + Languages side by side -->
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&rank_icon=percentile&show=reviews,discussions_started,prs_merged,prs_merged_percentage" alt="Sanket's GitHub Stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&exclude_repo=github-readme-stats" alt="Top Languages" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&rank_icon=percentile" alt="Sanket's GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=signaloninternet&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
 </p>
 
-<!-- Row 2: Streak stats -->
+<!-- Streak -->
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=signaloninternet&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=signaloninternet&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
 </p>
 
-<!-- Row 3: Activity Graph -->
+<!-- Contribution activity graph -->
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=signaloninternet&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Contribution Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=signaloninternet&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity%20Graph" alt="Contribution Graph" />
 </p>
 
-<!-- Row 4: Profile summary cards -->
+<!-- Shields badges — always work -->
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=signaloninternet&theme=tokyonight" alt="Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=signaloninternet&theme=tokyonight&utcOffset=5.5" alt="Productive Time" />
-</p>
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=signaloninternet&theme=tokyonight" alt="Repos Per Language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=signaloninternet&theme=tokyonight" alt="Most Commit Language" />
-</p>
-
-<!-- Row 5: Full profile details -->
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=signaloninternet&theme=tokyonight" alt="Profile Details" />
-</p>
-
-<!-- Row 6: Trophies -->
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=signaloninternet&theme=tokyonight&no-frame=true&column=6&margin-w=8&margin-h=8" alt="GitHub Trophies" />
-</p>
-
-<!-- Row 7: Metrics (comprehensive overview) -->
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=signaloninternet&theme=tokyonight&hide_border=true&layout=compact" alt="WakaTime Stats" />
-</p>
-
-<!-- Row 8: Profile views + followers badge -->
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=signaloninternet&color=blue&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/signaloninternet?style=for-the-badge&color=blue&labelColor=1a1a2e&label=FOLLOWERS" alt="Followers" />
+  <img src="https://img.shields.io/github/followers/signaloninternet?style=for-the-badge&logo=github&label=Followers&color=0891b2&labelColor=1c1917" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/signaloninternet?style=for-the-badge&logo=github&label=Stars&color=0891b2&labelColor=1c1917" alt="Stars" />
 </p>
 
 ---
