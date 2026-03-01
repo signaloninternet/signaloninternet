@@ -14,11 +14,11 @@
 
 ## Hey, I'm Sanket
 
-I'm 20, currently in my pre-final year studying CS with a focus on AI and ML. But honestly I've been building things since long before college started — websites, apps, backends, payment systems, whatever the problem needed.
+I'm 20, currently in my pre-final year studying CS with a focus on AI and ML. But honestly I've been building things since long before college started, websites, apps, backends, payment systems, whatever the problem needed.
 
 Over the last 4 years I've shipped real software for real clients. Not side projects that live on localhost. Actual production systems with real users, real payments, and real consequences when something breaks. I've worked with US-based startups as a contract engineer while still being a full-time student, and I've built some fairly complex platforms entirely on my own from architecture to deployment.
 
-Right now I'm most drawn to problems at the intersection of AI and financial systems — the kind of work where strong engineering meets genuine mathematical depth. I have a strong math foundation and I'm actively pushing deeper into that space.
+Right now I'm most drawn to problems at the intersection of AI and financial systems, the kind of work where strong engineering meets genuine mathematical depth. I have a strong math foundation and I'm actively pushing deeper into that space.
 
 If you want to see what I actually build, keep reading.
 
@@ -79,18 +79,18 @@ I mostly live in TypeScript and Python. On the frontend it's React, Next.js, and
 
 ## 💼 Where I've worked
 
-### OceanWaveWeb LLC — Software Engineer
-**Mar 2025 – Nov 2025 · Remote, US**
+### OceanWaveWeb LLC | Software Engineer
+**Mar 2025 to Nov 2025 · Remote, US**
 
 This was the most intense stretch of building I've done. I was the only engineer. No senior to ask questions, no one to review architecture decisions, no team to split the work. Just me and two very large, very real platforms that needed to be designed and shipped.
 
-**The first was OceanWave Brain** — a full agency operating system. The idea was to replace all the scattered tools an agency uses (project management, client communication, billing, time tracking, sales pipeline) with one unified platform that has proper role separation. I built it with React, Vite, and Supabase on the backend.
+**The first was OceanWave Brain**, a full agency operating system. The idea was to replace all the scattered tools an agency uses (project management, client communication, billing, time tracking, sales pipeline) with one unified platform that has proper role separation. I built it with React, Vite, and Supabase on the backend.
 
-The four roles — admin, super_admin, employee, and client — each have completely isolated access. This isn't handled in the frontend with if-statements. The RLS policies in Postgres enforce it at the database level, so even if someone bypassed the UI, they'd hit a wall. The agency side has a full CRM, workspace and task management, time tracking, team roster, and a sales pipeline. I also plugged in Gemini API to give AI-powered summaries and insights on tasks and finances, and Stream for real-time video huddles inside the platform.
+The four roles (admin, super_admin, employee, and client) each have completely isolated access. This isn't handled in the frontend with if-statements. The RLS policies in Postgres enforce it at the database level, so even if someone bypassed the UI, they'd hit a wall. The agency side has a full CRM, workspace and task management, time tracking, team roster, and a sales pipeline. I also plugged in Gemini API to give AI-powered summaries and insights on tasks and finances, and Stream for real-time video huddles inside the platform.
 
-The billing side was the most complex part. I implemented Stripe Connect from scratch — seller onboarding, public checkout pages by order ID, webhook-based payment sync, and automated fee transfer logic between connected accounts. Then on top of that I built a completely separate platform payments API for third-party business apps to integrate with — their own onboarding, API key management, subscription billing, and webhook processing. Two independent payment systems, one codebase.
+The billing side was the most complex part. I implemented Stripe Connect from scratch: seller onboarding, public checkout pages by order ID, webhook-based payment sync, and automated fee transfer logic between connected accounts. Then on top of that I built a completely separate platform payments API for third-party business apps to integrate with. Their own onboarding, API key management, subscription billing, and webhook processing. Two independent payment systems, one codebase.
 
-The last piece was a public Edge API layer. External websites (what we called "skins") could fetch a client's live profile content — products, services, gallery, blogs — purely by username. Essentially a headless CMS that external devs could build on top of.
+The last piece was a public Edge API layer. External websites (what we called "skins") could fetch a client's live profile content (products, services, gallery, blogs) purely by username. Essentially a headless CMS that external devs could build on top of.
 
 ```
 Agency Dashboard  ──┐
@@ -105,9 +105,9 @@ External Skins    ──┘         │
 
 The problem was simple on the surface: a valet operation needed to go fully digital. But once you start modeling it properly, it gets complicated fast. You have multiple staff on the same shift modifying the same ticket queue simultaneously. You have guests who need to request their car from their phone without creating an account. You have a restaurant owner who needs to see revenue numbers in real time. And you have payments that need to flow through WhatsApp, SMS, or email depending on what the guest prefers.
 
-I built three separate surfaces. The mobile app (React Native + Expo) is what staff use on shift — they sign in, open a shift, check vehicles in, assign them to zones and key slots, manage the queue, collect payment, and close out. The admin console (Next.js) is what the restaurant owner uses — full location management, staff assignment and approval, rate configuration, shift management, and a finance dashboard. The customer portal is a simple tokenized page (`/t/{token}`) where guests can request their car and pay digitally, no login required.
+I built three separate surfaces. The mobile app (React Native + Expo) is what staff use on shift. They sign in, open a shift, check vehicles in, assign them to zones and key slots, manage the queue, collect payment, and close out. The admin console (Next.js) is what the restaurant owner uses: full location management, staff assignment and approval, rate configuration, shift management, and a finance dashboard. The customer portal is a simple tokenized page (`/t/{token}`) where guests can request their car and pay digitally, no login required.
 
-The ticket moves through four states: active → requested → ready → completed. What I'm proud of is that this isn't enforced in the app code. PostgreSQL triggers handle the state transitions and auto-generate invoice rows the moment a ticket is created. RLS policies mean staff can only ever see and operate on tickets at their assigned location — it's not a filter I apply in the query, it's enforced by the database before the query even runs.
+The ticket moves through four states: active → requested → ready → completed. What I'm proud of is that this isn't enforced in the app code. PostgreSQL triggers handle the state transitions and auto-generate invoice rows the moment a ticket is created. RLS policies mean staff can only ever see and operate on tickets at their assigned location. It's not a filter I apply in the query. It's enforced by the database before the query even runs.
 
 The payment flow goes through a single Supabase Edge Function that creates the payment intent, generates a short link (`/p/{code}`), fires it off via Twilio or SendGrid, logs the delivery to an audit table, and if the payment provider returns a client secret instead of a redirect, the hosted `/pay/{code}` page handles the card confirmation. Every single step is logged.
 
@@ -127,28 +127,28 @@ Staff retrieves car → ticket goes ready → payment collected
 Ticket completed → invoice finalized → shows in v_revenue_daily
 ```
 
-On top of these two platforms I also delivered 12+ production websites for clients using Next.js and TypeScript (consistently hitting 95–100 on PageSpeed) and built a multi-tenant restaurant ordering system in React Native that's live across 11+ branches.
+On top of these two platforms I also delivered 12+ production websites for clients using Next.js and TypeScript (consistently hitting 95 to 100 on PageSpeed) and built a multi-tenant restaurant ordering system in React Native that's live across 11+ branches.
 
 ---
 
-### Mediamaxxing LLC — Software Engineer
-**Nov 2025 – Present · Remote, US**
+### Mediamaxxing LLC | Software Engineer
+**Nov 2025 to Present · Remote, US**
 
-I joined to help build AI tooling for content workflows. The main thing I built was a video and content editing pipeline powered by Gemini API that cut manual processing time by 60%. I also designed a content quality and spam scoring engine for TikTok, YouTube, and Instagram — it looks at engagement patterns, metadata signals, and sentiment to flag low-quality or inauthentic content. Beyond that I've been in the trenches fixing production issues (1,400+ closed) and pushing code constantly (300+ PRs merged), while also working on Redis caching and AWS optimization to keep the platform fast under load.
+I joined to help build AI tooling for content workflows. The main thing I built was a video and content editing pipeline powered by Gemini API that cut manual processing time by 60%. I also designed a content quality and spam scoring engine for TikTok, YouTube, and Instagram. It looks at engagement patterns, metadata signals, and sentiment to flag low-quality or inauthentic content. Beyond that I've been in the trenches fixing production issues (1,400+ closed) and pushing code constantly (300+ PRs merged), while also working on Redis caching and AWS optimization to keep the platform fast under load.
 
 ---
 
-### CyberFlux Enterprises — Frontend Developer
-**Nov 2024 – Mar 2025 · Remote, India**
+### CyberFlux Enterprises | Frontend Developer
+**Nov 2024 to Mar 2025 · Remote, India**
 
 My first proper engineering role. I built the frontend for a custom apparel design platform and worked on NeuraSim.Health, which ended up being featured on Shark Tank India. Reduced load times by 30% through proper asset optimization and component architecture.
 
 ---
 
-### PhonePe — Business Development Executive
-**Feb 2023 – Aug 2023 · Thane, India**
+### PhonePe | Business Development Executive
+**Feb 2023 to Aug 2023 · Thane, India**
 
-Before I went fully into engineering I spent 7 months in sales at PhonePe. I'm glad I did it — understanding how business and revenue actually work made me a better engineer. Got 100% adoption on new product launches within two weeks, drove 21% revenue growth in my sector.
+Before I went fully into engineering I spent 7 months in sales at PhonePe. I'm glad I did it. Understanding how business and revenue actually work made me a better engineer. Got 100% adoption on new product launches within two weeks, drove 21% revenue growth in my sector.
 
 ---
 
@@ -166,15 +166,15 @@ Before I went fully into engineering I spent 7 months in sales at PhonePe. I'm g
 
 ## 🧠 Something I think about a lot
 
-GDP is a bad measure of how a country is actually doing. It captures output but misses almost everything that matters — how knowledge compounds, how fast technology is being adopted, whether people have real opportunity. I've been building a framework that tries to model these things more honestly, pulling in variables like innovation output, human capital accumulation, and sustainability alongside the traditional indicators. It's early work but it's the kind of problem I'd like to spend real time on eventually.
+GDP is a bad measure of how a country is actually doing. It captures output but misses almost everything that matters: how knowledge compounds, how fast technology is being adopted, whether people have real opportunity. I've been building a framework that tries to model these things more honestly, pulling in variables like innovation output, human capital accumulation, and sustainability alongside the traditional indicators. It's early work but it's the kind of problem I'd like to spend real time on eventually.
 
-It's also why I'm drawn to quant and AI roles in finance — the interesting work there is fundamentally about building better models of reality.
+It's also why I'm drawn to quant and AI roles in finance. The interesting work there is fundamentally about building better models of reality.
 
 ---
 
 <div align="center">
 
-*If you're working on something genuinely hard — especially at the intersection of AI and markets — I want to hear about it.*
+*If you're working on something genuinely hard, especially at the intersection of AI and markets, I want to hear about it.*
 
 [![Get In Touch](https://img.shields.io/badge/Get%20In%20Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sanket@signaloninternet.com)
 
