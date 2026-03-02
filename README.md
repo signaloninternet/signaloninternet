@@ -8,7 +8,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-signalinternet-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/signalinternet/)
 [![Website](https://img.shields.io/badge/Website-signaloninternet.com-6366F1?style=flat-square&logo=safari&logoColor=white)](https://www.signaloninternet.com/)
 </div>
----
 
 ## Hey, I'm Sanket
 
