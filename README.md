@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sanket Sharma
+# Sanket Sharma 
 
 **Software Engineer · Systems Thinker · AI & Markets**
 
