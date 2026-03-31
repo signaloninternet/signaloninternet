@@ -17,7 +17,7 @@ Over the last 4 years I've shipped real software for real clients. Not side proj
 
 Right now I'm most drawn to problems at the intersection of AI and financial systems, the kind of work where strong engineering meets genuine mathematical depth. I have a strong math foundation and I'm actively pushing deeper into that space.
 
-If you want to see what I actually build, keep reading.
+If you want to see what I actually build, keep reading. 
 
 ---
 
