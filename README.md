@@ -1,7 +1,7 @@
 <div align="center">
 
 # Sanket Sharma 
-
+ 
 **Software Engineer · Systems Thinker · AI & Markets**
 
 [![Email](https://img.shields.io/badge/Email-sanket%40signaloninternet.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sanket@signaloninternet.com)
