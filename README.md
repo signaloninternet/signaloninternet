@@ -33,10 +33,6 @@ If you want to see what I actually build, keep reading.
 
 <img src="https://streak-stats.demolab.com?user=signaloninternet&theme=rose-pine&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&fire=8B5CF6&ring=F97316&currStreakLabel=F97316&sideLabels=6B7280&dates=6B7280&stroke=1F1F2E&background=0F0F1A&currStreakNum=8B5CF6&sideNums=E2E8F0" alt="Weekly Streak" />
 
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=signaloninternet&theme=react-dark&hide_border=true&area=true&area_color=8B5CF6&color=8B5CF6&line=F97316&point=F97316&custom_title=Contribution%20Activity" alt="Contribution Graph" />
-
-<img src="https://github-readme-stats.vercel.app/api?username=signaloninternet&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=percentile&theme=transparent&title_color=8B5CF6&text_color=E2E8F0&icon_color=F97316&bg_color=0F0F1A" alt="GitHub Stats" />
-
 </div>
 
 ---
