@@ -2,7 +2,7 @@ name: Update Streak Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,30 +12,33 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Generate streak stats
         uses: be-next/github-streak-stats-action@v1
         with:
           username: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: streak-dark.svg
+          output-path: streak-korean.svg
           theme: dark
           hide-border: true
-          background: 0F0F1A
-          stroke: 1F1F2E
-          ring: 8B5CF6
-          fire: F97316
-          currStreakNum: F97316
-          currStreakLabel: 8B5CF6
-          sideNums: E2E8F0
-          sideLabels: 6B7280
-          dates: 6B7280
 
-      - name: Commit changes
+          # Korean-aesthetic / soft Seoul night palette
+          background: 0B1020
+          stroke: 23283B
+          ring: C4B5FD
+          fire: F9A8D4
+          currStreakNum: FFD29D
+          currStreakLabel: E9D5FF
+          sideNums: F8FAFC
+          sideLabels: A1A1AA
+          dates: 94A3B8
+
+      - name: Commit updated SVG
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add streak-dark.svg
+          git add streak-korean.svg
           git commit -m "Update streak stats" || exit 0
           git push
