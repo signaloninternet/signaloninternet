@@ -27,7 +27,7 @@ If you want to see what I actually build, keep reading.
 
 🔥 **Daily**
 
-<img src="https://streak-stats.demolab.com?user=signaoninternet&theme=rose-pine&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=daily&fire=F97316&ring=8B5CF6&currStreakLabel=8B5CF6&sideLabels=6B7280&dates=6B7280&stroke=1F1F2E&background=0F0F1A&currStreakNum=F97316&sideNums=E2E8F0" alt="Daily Streak" />
+<img src="https://streak-stats.demolab.com?user=signaloninternet&theme=rose-pine&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=daily&fire=F97316&ring=8B5CF6&currStreakLabel=8B5CF6&sideLabels=6B7280&dates=6B7280&stroke=1F1F2E&background=0F0F1A&currStreakNum=F97316&sideNums=E2E8F0" alt="Daily Streak" />
 
 📅 **Weekly**
 
