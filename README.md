@@ -27,7 +27,7 @@ If you want to see what I actually build, keep reading.
 
 🔥 **Daily**
 
-<img src="https://raw.githubusercontent.com/signaloninternet/signaloninternet/main/profile/streak-dark.svg" alt="Daily Streak" />
+<img src="https://raw.githubusercontent.com/signaloninternet/signaloninternet/main/streak-dark.svg" alt="Daily Streak" />
 
 📅 **Weekly**
 
