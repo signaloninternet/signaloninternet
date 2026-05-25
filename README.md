@@ -124,12 +124,7 @@ On top of these two platforms I also delivered 12+ production websites for clien
 
 ---
 
-### Mediamaxxing LLC | Software Engineer
-**Nov 2025 to February 2025 · Remote, US**
 
-I joined to help build AI tooling for content workflows. The main thing I built was a video and content editing pipeline powered by Gemini API that cut manual processing time by 60%. I also designed a content quality and spam scoring engine for TikTok, YouTube, and Instagram. It looks at engagement patterns, metadata signals, and sentiment to flag low-quality or inauthentic content. Beyond that I've been in the trenches fixing production issues (1,400+ closed) and pushing code constantly (300+ PRs merged), while also working on Redis caching and AWS optimization to keep the platform fast under load.
-
----
 
 ### CyberFlux Enterprises | Frontend Developer
 **Nov 2024 to Mar 2025 · Remote, India**
