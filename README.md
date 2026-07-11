@@ -8,7 +8,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-signalinternet-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/signalinternet/)
 [![Website](https://img.shields.io/badge/Website-signaloninternet.com-6366F1?style=flat-square&logo=safari&logoColor=white)](https://www.signaloninternet.com/)
 </div>
-
+ 
 ## Hey, I'm Sanket 
  
 I'm 21, currently in my final year studying CS with a focus on AI and ML. But honestly I've been building things since long before college started, websites, apps, backends, payment systems, whatever the problem needed. 
