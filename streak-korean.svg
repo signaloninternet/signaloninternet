@@ -30,8 +30,8 @@
 
   <!-- Longest Streak -->
   <g transform="translate(340, 48)">
-    <text class="stat-number" fill="#F8FAFC" text-anchor="middle" x="55">327</text>
+    <text class="stat-number" fill="#F8FAFC" text-anchor="middle" x="55">326</text>
     <text class="stat-label" fill="#A1A1AA" text-anchor="middle" x="55" y="30">Longest Streak</text>
-    <text class="date-range" text-anchor="middle" x="55" y="50">Oct 4, 2025 - Aug 26, 2026</text>
+    <text class="date-range" text-anchor="middle" x="55" y="50">Oct 5, 2025 - Aug 26, 2026</text>
   </g>
 </svg>
