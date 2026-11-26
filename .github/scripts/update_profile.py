@@ -1,10 +1,8 @@
-"""Refresh the public activity sections in the GitHub profile README."""
+"""Refresh the public GitHub stats on the profile card and its alt text."""
 
 import json
 import os
 import re
-from calendar import day_name
-from collections import Counter
 from datetime import datetime, time, timedelta
 from pathlib import Path
 from urllib.parse import urlencode
@@ -14,7 +12,9 @@ from zoneinfo import ZoneInfo
 
 USERNAME = os.getenv("GITHUB_REPOSITORY_OWNER", "signaloninternet")
 TIME_ZONE = ZoneInfo("Asia/Kolkata")
-README = Path(__file__).resolve().parents[2] / "README.md"
+ROOT = Path(__file__).resolve().parents[2]
+README = ROOT / "README.md"
+CARD = ROOT / "assets/profile-header.svg"
 PAGE_SIZE = 100
 SEARCH_LIMIT = 1000
 
@@ -76,126 +76,61 @@ def public_commits(start, end):
     return items
 
 
-def chart(rows, total, show_count=False):
-    rows = list(rows)
-    if not total:
-        return "_No public data in this period._"
 
-    name_width = max(len(name) for name, _ in rows)
-    count_width = max(len(f"{value:,}") for _, value in rows) if show_count else 0
-    bar_width = 11
-    lines = []
-    for name, value in rows:
-        share = round(value / total, 3)
-        full_blocks, fraction = divmod(round(share * bar_width * 8), 8)
-        partial_block = "▏▎▍▌▋▊▉"[fraction - 1] if fraction else ""
-        bar = ("█" * full_blocks + partial_block).ljust(bar_width, "░")
-        count = f" {value:>{count_width},}" if show_count else ""
-        lines.append(f"{name:<{name_width}}{count} {bar} {share:>5.1%}")
-    return "```text\n" + "\n".join(lines) + "\n```"
+def replace_one(source, pattern, replacement):
+    updated, count = re.subn(pattern, replacement, source)
+    if count != 1:
+        raise ValueError(f"Expected one match for {pattern}")
+    return updated
 
 
-def display_date(day):
-    return f"{day.day} {day:%b %Y}"
-
-
-def github_activity(today):
+def main():
+    today = datetime.now(TIME_ZONE).date()
     start = today - timedelta(days=365)
     end = today - timedelta(days=1)
 
-    commits = {}
-    active_repos = set()
+    commits = set()
     for item in public_commits(start, end):
         date = item["commit"]["author"]["date"].replace("Z", "+00:00")
         authored = datetime.fromisoformat(date).astimezone(TIME_ZONE)
         if start <= authored.date() <= end and not item["repository"]["private"]:
-            commits[item["sha"]] = authored
-            active_repos.add(item["repository"]["full_name"])
+            commits.add(item["sha"])
 
     repositories = owned_repositories()
-    languages = Counter()
-    for repo in repositories:
-        if not repo["fork"]:
-            languages.update(github(f"/repos/{repo['full_name']}/languages"))
-
-    followers = github(f"/users/{USERNAME}")["followers"]
     stars = sum(repo["stargazers_count"] for repo in repositories)
-    total = len(commits)
-    repository_count = len(active_repos)
-    commit_label = "commit" if total == 1 else "commits"
-    repository_label = "repository" if repository_count == 1 else "repositories"
-    weekdays = Counter(authored.weekday() for authored in commits.values())
-    periods = Counter(authored.hour // 6 for authored in commits.values())
-    day_rows = [(day_name[index], weekdays[index]) for index in range(7)]
-    time_rows = [
-        ("Morning", periods[1]),
-        ("Daytime", periods[2]),
-        ("Evening", periods[3]),
-        ("Night", periods[0]),
-    ]
-    language_rows = sorted(languages.items(), key=lambda entry: (-entry[1], entry[0]))
-    language_total = sum(languages.values())
-    top_languages = language_rows[:5]
-    remainder = language_total - sum(value for _, value in top_languages)
-    if remainder:
-        top_languages.append(("Other", remainder))
+    followers = github(f"/users/{USERNAME}")["followers"]
+    stats = {
+        "repo-count": len(repositories),
+        "commit-count": len(commits),
+        "star-count": stars,
+        "follower-count": followers,
+    }
 
-    return f"""**Public repos** {len(repositories):,} · **Stars earned** {stars:,} · **Followers** {followers:,}
+    card = CARD.read_text(encoding="utf-8")
+    updated_card = card
+    for field, value in stats.items():
+        updated_card = replace_one(
+            updated_card,
+            rf'(<text id="{field}"[^>]*>)[0-9,]+(</text>)',
+            lambda match: f"{match[1]}{value:,}{match[2]}",
+        )
 
-### Public commit activity
-
-**{total:,}** {commit_label} across **{repository_count:,}** {repository_label} · {display_date(start)} to {display_date(end)}
-
-Times are in **Asia/Kolkata (IST)**. Counts cover distinct authored commits indexed by GitHub on public default branches.
-
-**By time of day** · Four 6-hour windows starting at 06:00 IST
-
-{chart(time_rows, total, show_count=True)}
-
-**By weekday**
-
-{chart(day_rows, total, show_count=True)}
-
-### Languages in public repositories
-
-Share of code by byte count, across owned public repositories excluding forks.
-
-{chart(top_languages, language_total)}
-
-_Updated {display_date(today)} via the GitHub API._"""
-
-
-def coding_time():
-    # Create a public language chart at https://wakatime.com/share, then use its
-    # SVG URL as the WAKATIME_LANGUAGES_EMBED_URL repository variable.
-    url = os.getenv("WAKATIME_LANGUAGES_EMBED_URL", "").strip()
-    if not url:
-        return ""
-    if not re.fullmatch(r"https://wakatime\.com/share/@?[A-Za-z0-9_.-]+/[A-Fa-f0-9-]+\.svg", url):
-        raise ValueError("WAKATIME_LANGUAGES_EMBED_URL must be a WakaTime share SVG URL")
-    return f"### Tracked coding time\n\n![Coding time by language from WakaTime]({url})"
-
-
-def replace_section(readme, name, content):
-    start = f"<!-- {name}:start -->"
-    end = f"<!-- {name}:end -->"
-    if readme.count(start) != 1 or readme.count(end) != 1 or readme.index(end) < readme.index(start):
-        raise ValueError(f"Expected one ordered pair of README markers for {name}")
-
-    head, _, rest = readme.partition(start)
-    _, _, tail = rest.partition(end)
-    body = f"\n\n{content}\n\n" if content else "\n"
-    return head + start + body + end + tail
-
-
-def main():
+    star_label = "star" if stars == 1 else "stars"
+    commits_label = "commit" if len(commits) == 1 else "commits"
+    repo_label = "repository" if len(repositories) == 1 else "repositories"
+    follower_label = "follower" if followers == 1 else "followers"
+    summary = (
+        f"GitHub stats: {len(repositories):,} public {repo_label}, {stars:,} {star_label}, "
+        f"{len(commits):,} public {commits_label} in the past 365 days, "
+        f"and {followers:,} {follower_label}."
+    )
     readme = README.read_text(encoding="utf-8")
-    tracked_time = coding_time()
-    today = datetime.now(TIME_ZONE).date()
-    updated = replace_section(readme, "github-activity", github_activity(today))
-    updated = replace_section(updated, "coding-time", tracked_time)
-    if updated != readme:
-        README.write_text(updated, encoding="utf-8")
+    updated_readme = replace_one(readme, r'GitHub stats: [^".]+\.', summary)
+
+    if updated_card != card:
+        CARD.write_text(updated_card, encoding="utf-8")
+    if updated_readme != readme:
+        README.write_text(updated_readme, encoding="utf-8")
 
 
 if __name__ == "__main__":

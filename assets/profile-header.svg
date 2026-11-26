@@ -1,41 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" role="img" aria-labelledby="title description">
-  <title id="title">Sanket Sharma — Joker of spades</title>
-  <desc id="description">Product engineer in Delhi, India. Terminal-inspired profile card with a spade illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="260" viewBox="0 0 660 260" role="img" aria-labelledby="title">
+  <title id="title">Sanket Sharma · Joker of spades</title>
+  <style>
+    svg { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .surface { fill: #f4f5f6; stroke: #e3e5e8; }
+    .text { fill: #191b20; }
+    .muted { fill: #515762; }
+    .accent { fill: #a43128; }
+    .rule { stroke: #9298a1; }
+    .leader { stroke: #a5aab2; stroke-width: 2; stroke-dasharray: 2 5; }
+    @media (prefers-color-scheme: dark) {
+      .surface { fill: #18191b; stroke: #35363a; }
+      .text { fill: #f4f4f5; }
+      .muted { fill: #b9bbc3; }
+      .accent { fill: #ff877b; }
+      .rule { stroke: #686b73; }
+      .leader { stroke: #727680; }
+    }
+  </style>
 
   <defs>
-    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#11131D"/>
-      <stop offset="1" stop-color="#241A3A"/>
-    </linearGradient>
-    <linearGradient id="spade" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#F0E9FF"/>
-      <stop offset="1" stop-color="#AE8DFF"/>
-    </linearGradient>
-    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r=".8" fill="#C9B8FA" opacity=".25"/>
+    <pattern id="dot-matrix" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle class="text" cx="3" cy="3" r="2.05"/>
     </pattern>
   </defs>
 
-  <rect x=".5" y=".5" width="719" height="223" rx="16" fill="url(#background)" stroke="#4B3C6D"/>
-  <path d="M1 43.5H719" stroke="#4B3C6D"/>
-  <circle cx="25" cy="22" r="3.5" fill="#F3AAA5"/>
-  <circle cx="39" cy="22" r="3.5" fill="#EBCD89"/>
-  <circle cx="53" cy="22" r="3.5" fill="#A7DAC0"/>
+  <rect class="surface" x=".5" y=".5" width="659" height="259" rx="12"/>
 
-  <g font-family="ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace">
-    <text x="71" y="27" fill="#C3B7D9" font-size="14">~/signaloninternet</text>
-    <text x="34" y="148" fill="#D6BFFF" font-size="23" font-weight="600">Joker of spades</text>
-    <text x="34" y="187" fill="#C3B7D9" font-size="17">Product Engineer · Delhi, India</text>
-  </g>
+  <path fill="url(#dot-matrix)" d="M104 37C88 64 55 82 39 107C18 140 38 173 69 171C83 170 95 163 103 151C100 186 90 201 74 216H134C118 201 108 186 105 151C113 163 125 170 139 171C170 173 190 140 169 107C153 82 120 64 104 37Z"/>
 
-  <text x="32" y="116" fill="#FCF9FF" font-family="Georgia, Times New Roman, serif" font-size="54" font-weight="bold">Sanket Sharma</text>
+  <text class="muted" x="205" y="35" font-size="18">@signaloninternet</text>
+  <path class="rule" d="M405 30.5H633"/>
+  <text class="text" x="203" y="82" font-size="40" font-weight="700">Sanket Sharma</text>
+  <text class="accent" x="205" y="118" font-size="28" font-weight="600">Joker of spades</text>
+  <rect class="accent" x="468" y="98" width="8" height="22"/>
+  <text class="muted" x="205" y="149" font-size="19">Product Engineer · Full-stack &amp; AI</text>
 
-  <rect x="530" y="61" width="160" height="144" rx="10" fill="url(#dots)"/>
-  <rect x="555" y="72" width="109" height="121" rx="10" fill="#201831" stroke="#594579" transform="rotate(10 609.5 132.5)"/>
-  <g transform="rotate(-8 608 132)">
-    <rect x="554" y="71" width="108" height="122" rx="10" fill="#2D2145" stroke="#9679C5"/>
-    <rect x="562" y="79" width="92" height="106" rx="6" fill="none" stroke="#594579"/>
-    <path d="M608 100C599 114 581 122 581 137C581 152 600 158 607 144C606 154 602 159 597 164H619C614 159 610 154 609 144C616 158 635 152 635 137C635 122 617 114 608 100Z" fill="url(#spade)"/>
-    <path d="M575 88v12m-6-6h12m60 69v12m-6-6h12" stroke="#CDB3FF" stroke-linecap="round"/>
+  <text class="text" x="205" y="187" font-size="18" font-weight="600">GitHub · Public</text>
+  <path class="rule" d="M379 181.5H633"/>
+
+  <g font-size="18">
+    <text class="muted" x="205" y="217">Repos</text>
+    <text class="muted" x="205" y="242">Commits (1y)</text>
+    <text class="muted" x="455" y="217">Stars</text>
+    <text class="muted" x="455" y="242">Followers</text>
+    <path class="leader" d="M267 211.5H357 M349 236.5H357 M516 211.5H585 M557 236.5H585"/>
+    <g class="text" font-weight="700" text-anchor="end">
+      <text id="repo-count" x="418" y="217">32</text>
+      <text id="commit-count" x="418" y="242">81</text>
+      <text id="star-count" x="633" y="217">1</text>
+      <text id="follower-count" x="633" y="242">11</text>
+    </g>
   </g>
 </svg>
