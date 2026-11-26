@@ -65,13 +65,12 @@ def main():
     calendar = fetch_calendar()
     count = contribution_count(calendar)
     label = "contribution" if count == 1 else "contributions"
-    line = (
-        f"[{count:,} GitHub {label} in the last year]"
-        f"(https://github.com/{USERNAME}#{GRAPH_HEADING})"
-    )
+    line = f"<summary>{count:,} GitHub {label} in the last year</summary>"
 
     readme = README.read_text(encoding="utf-8")
-    updated, matches = re.subn(r"(?m)^.*(?= <!-- github-contributions -->$)", line, readme)
+    updated, matches = re.subn(
+        r"(?m)^<summary>[^\n]*</summary>(?= <!-- github-contributions -->$)", line, readme
+    )
     if matches != 1:
         raise ValueError("Expected exactly one GitHub contribution line in the README")
     if args.calendar:

@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 124" width="740" height="124" role="img" aria-labelledby="title">
-  <title id="title">AI Product Engineer</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 82" width="740" height="82" role="img" aria-labelledby="title">
+  <title id="title">Sanket Sharma</title>
   <defs>
     <pattern id="paper-grid" width="16" height="16" patternUnits="userSpaceOnUse">
       <path class="grid" d="M16 0H0V16" fill="none"/>
     </pattern>
-    <clipPath id="sheet"><rect x="13" y="14" width="714" height="97" rx="5"/></clipPath>
+    <clipPath id="sheet"><rect x="13" y="9" width="714" height="64" rx="5"/></clipPath>
   </defs>
   <style>
     .paper { fill: #fcf7eb; stroke: #d9b68a; }
@@ -22,12 +22,12 @@
       .tape { fill: #bc8552; opacity: .75; }
     }
   </style>
-  <rect x="17" y="18" width="714" height="97" rx="5" fill="#342416" opacity=".11"/>
-  <rect class="paper" x="13.5" y="14.5" width="713" height="96" rx="5"/>
-  <rect x="13" y="14" width="714" height="97" fill="url(#paper-grid)" clip-path="url(#sheet)"/>
-  <path class="tape" d="m3 31 49-30 10 16-49 30zM682 102l47-30 10 16-47 31z"/>
-  <text class="ink" x="49" y="77" font-family="Georgia, 'Times New Roman', serif" font-size="51" font-weight="700">AI Product Engineer</text>
-  <g transform="translate(630 62) rotate(8)">
+  <rect x="16" y="12" width="714" height="64" rx="5" fill="#342416" opacity=".11"/>
+  <rect class="paper" x="13.5" y="9.5" width="713" height="63" rx="5"/>
+  <rect x="13" y="9" width="714" height="64" fill="url(#paper-grid)" clip-path="url(#sheet)"/>
+  <path class="tape" d="m3 22 39-22 7 13-39 22zM692 69l39-22 7 13-39 22z"/>
+  <text class="ink" x="48" y="54" font-family="Georgia, 'Times New Roman', serif" font-size="41" font-weight="700">Sanket Sharma</text>
+  <g transform="translate(638 41) rotate(8) scale(.7)">
     <circle class="stamp-rule" r="33"/>
     <circle class="stamp-rule" r="28" stroke-dasharray="1.25 2.25"/>
     <path class="stamp-rule" d="M-15 0H0M0 0V-13M0 0V13M0 0H15"/>
