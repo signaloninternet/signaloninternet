@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="224" viewBox="0 0 720 224" role="img" aria-labelledby="title description">
+  <title id="title">Sanket Sharma — Joker of spades</title>
+  <desc id="description">Product engineer in Delhi, India. Terminal-inspired profile card with a spade illustration.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#11131D"/>
+      <stop offset="1" stop-color="#241A3A"/>
+    </linearGradient>
+    <linearGradient id="spade" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#F0E9FF"/>
+      <stop offset="1" stop-color="#AE8DFF"/>
+    </linearGradient>
+    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r=".8" fill="#C9B8FA" opacity=".25"/>
+    </pattern>
+  </defs>
+
+  <rect x=".5" y=".5" width="719" height="223" rx="16" fill="url(#background)" stroke="#4B3C6D"/>
+  <path d="M1 43.5H719" stroke="#4B3C6D"/>
+  <circle cx="25" cy="22" r="3.5" fill="#F3AAA5"/>
+  <circle cx="39" cy="22" r="3.5" fill="#EBCD89"/>
+  <circle cx="53" cy="22" r="3.5" fill="#A7DAC0"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace">
+    <text x="71" y="27" fill="#C3B7D9" font-size="14">~/signaloninternet</text>
+    <text x="34" y="148" fill="#D6BFFF" font-size="23" font-weight="600">Joker of spades</text>
+    <text x="34" y="187" fill="#C3B7D9" font-size="17">Product Engineer · Delhi, India</text>
+  </g>
+
+  <text x="32" y="116" fill="#FCF9FF" font-family="Georgia, Times New Roman, serif" font-size="54" font-weight="bold">Sanket Sharma</text>
+
+  <rect x="530" y="61" width="160" height="144" rx="10" fill="url(#dots)"/>
+  <rect x="555" y="72" width="109" height="121" rx="10" fill="#201831" stroke="#594579" transform="rotate(10 609.5 132.5)"/>
+  <g transform="rotate(-8 608 132)">
+    <rect x="554" y="71" width="108" height="122" rx="10" fill="#2D2145" stroke="#9679C5"/>
+    <rect x="562" y="79" width="92" height="106" rx="6" fill="none" stroke="#594579"/>
+    <path d="M608 100C599 114 581 122 581 137C581 152 600 158 607 144C606 154 602 159 597 164H619C614 159 610 154 609 144C616 158 635 152 635 137C635 122 617 114 608 100Z" fill="url(#spade)"/>
+    <path d="M575 88v12m-6-6h12m60 69v12m-6-6h12" stroke="#CDB3FF" stroke-linecap="round"/>
+  </g>
+</svg>

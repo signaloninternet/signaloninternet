@@ -1,26 +1,40 @@
-name: Update Streak Stats
+name: Refresh Profile Stats
 
 on:
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: profile-stats-${{ github.ref }}
+
 jobs:
-  update-streak:
+  refresh-profile:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
       - name: Checkout repo
+        id: checkout
         uses: actions/checkout@v4
 
+      - name: Refresh public GitHub activity
+        id: activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WAKATIME_LANGUAGES_EMBED_URL: ${{ vars.WAKATIME_LANGUAGES_EMBED_URL }}
+        run: python3 .github/scripts/update_profile.py
+
       - name: Generate streak stats
+        id: streak
+        if: ${{ !cancelled() && steps.checkout.outcome == 'success' }}
         uses: be-next/github-streak-stats-action@v1
         with:
           username: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
           output-path: streak-korean.svg
+          timezone: Asia/Kolkata
           theme: dark
           hide-border: true
 
@@ -35,10 +49,22 @@ jobs:
           sideLabels: A1A1AA
           dates: 94A3B8
 
-      - name: Commit updated SVG
+      - name: Commit refreshed stats
+        if: ${{ !cancelled() && (steps.activity.outcome == 'success' || steps.streak.outcome == 'success') }}
+        env:
+          ACTIVITY_OUTCOME: ${{ steps.activity.outcome }}
+          STREAK_OUTCOME: ${{ steps.streak.outcome }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add streak-korean.svg
-          git commit -m "Update streak stats" || exit 0
+          if [ "$ACTIVITY_OUTCOME" = success ]; then
+            git add README.md
+          fi
+          if [ "$STREAK_OUTCOME" = success ]; then
+            git add streak-korean.svg
+          fi
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Refresh GitHub profile stats"
           git push
