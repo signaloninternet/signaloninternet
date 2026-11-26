@@ -4,9 +4,9 @@
   <a href="mailto:sanket@signaloninternet.com">Email</a>
 </p>
 
-<img src="assets/joker-note.svg" width="740" alt="Joker of spades">
+<img src="assets/profile-note.svg" width="740" alt="AI Product Engineer">
 
-**Hi, I’m Sanket!** I’m a product engineer at Ocean Wave Web. I build mobile apps, payment systems, and AI tools that show where their answers come from.
+**Hi, I’m Sanket.** I build mobile apps and payment systems at Ocean Wave Web. My AI work focuses on tools that cite their sources.
 
 **GitHub activity**
 
