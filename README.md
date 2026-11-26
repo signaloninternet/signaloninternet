@@ -1,9 +1,11 @@
-<p align="center">
-  <img src="assets/profile-header.svg" width="760" alt="Sanket Sharma, Joker of spades. Product engineer focused on full-stack and applied AI. GitHub stats: 32 public repositories, 1 star, 81 public commits in the past 365 days, and 11 followers." />
-</p>
+# Joker of spades ♠
 
-<p align="center">
-  <a href="https://www.signaloninternet.com/">Portfolio</a> ·
-  <a href="https://www.linkedin.com/in/signalinternet/">LinkedIn</a> ·
-  <a href="mailto:sanket@signaloninternet.com">Email</a>
-</p>
+I’m Sanket Sharma, a product engineer at Ocean Wave Web. I build mobile apps, payment systems, and AI tools.
+
+- **[Valora Valet](https://www.valoravalet.com/)** — Built the staff app and made checkout recoverable after interrupted payments.
+- **[PsychExcel](https://www.psychexcel.com/)** — Built an AI tutor that answers from course material and cites the passages it used.
+- **[Saleor](https://www.saleor.city/)** — Built an inventory and invoicing tool used by a business to manage over ₹20 lakh in stock.
+
+[Portfolio](https://www.signaloninternet.com/) · [LinkedIn](https://www.linkedin.com/in/signalinternet/) · [Email](mailto:sanket@signaloninternet.com)
+
+[5,891 GitHub contributions in the last year](https://github.com/signaloninternet#js-contribution-activity-description) <!-- github-contributions -->

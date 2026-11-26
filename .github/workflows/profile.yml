@@ -17,14 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Refresh profile card
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Refresh contribution total
         run: python3 .github/scripts/update_profile.py
 
       - name: Commit refreshed stats
         run: |
-          git add README.md assets/profile-header.svg
+          git add README.md
           if git diff --cached --quiet; then
             exit 0
           fi
