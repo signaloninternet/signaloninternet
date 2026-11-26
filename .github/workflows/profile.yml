@@ -17,12 +17,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Refresh contribution total
-        run: python3 .github/scripts/update_profile.py
+      - name: Check out the animation renderer
+        uses: actions/checkout@v4
+        with:
+          repository: pedrocatalao/github-cool-readme
+          ref: 909e532bf5d2847b26d156b91c0d086e6e7781ae # v1.8.1
+          path: .github-cool-readme
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Refresh contribution total and weekly chart
+        run: |
+          calendar="$RUNNER_TEMP/profile-calendar.json"
+          python3 .github/scripts/update_profile.py --calendar "$calendar"
+          node .github/scripts/render_weekly.mjs .github-cool-readme "$calendar"
 
       - name: Commit refreshed stats
         run: |
-          git add README.md
+          git add README.md assets/weekly-light.svg assets/weekly-dark.svg
           if git diff --cached --quiet; then
             exit 0
           fi

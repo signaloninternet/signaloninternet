@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 124" width="740" height="124" role="img" aria-labelledby="title">
+  <title id="title">Joker of spades</title>
+  <defs>
+    <pattern id="paper-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path class="grid" d="M16 0H0V16" fill="none"/>
+    </pattern>
+    <clipPath id="sheet"><rect x="13" y="14" width="714" height="97" rx="5"/></clipPath>
+  </defs>
+  <style>
+    .paper { fill: #fcf7eb; stroke: #d9b68a; }
+    .grid { stroke: #ae854b; stroke-opacity: .13; }
+    .ink { fill: #3f2818; }
+    .stamp { fill: #9a4e22; }
+    .stamp-rule { fill: none; stroke: #a75e33; stroke-width: 1.2; }
+    .tape { fill: #e6ac72; opacity: .7; }
+    @media (prefers-color-scheme: dark) {
+      .paper { fill: #271d16; stroke: #876043; }
+      .grid { stroke: #e5ba8b; stroke-opacity: .14; }
+      .ink { fill: #f7e9d5; }
+      .stamp { fill: #f4b584; }
+      .stamp-rule { stroke: #cb8f60; }
+      .tape { fill: #bc8552; opacity: .75; }
+    }
+  </style>
+  <rect x="17" y="18" width="714" height="97" rx="5" fill="#342416" opacity=".11"/>
+  <rect class="paper" x="13.5" y="14.5" width="713" height="96" rx="5"/>
+  <rect x="13" y="14" width="714" height="97" fill="url(#paper-grid)" clip-path="url(#sheet)"/>
+  <path class="tape" d="m3 31 49-30 10 16-49 30zM682 102l47-30 10 16-47 31z"/>
+  <text class="ink" x="49" y="77" font-family="Georgia, 'Times New Roman', serif" font-size="51" font-weight="700">Joker of spades</text>
+  <g transform="translate(630 62) rotate(8)">
+    <circle class="stamp-rule" r="33"/>
+    <circle class="stamp-rule" r="28" stroke-dasharray="1.25 2.25"/>
+    <path class="stamp" d="M0-18C-6-10-16-4-16 5C-16 13-6 17-1 9C-1 15-4 18-8 21H8C4 18 1 15 1 9C6 17 16 13 16 5C16-4 6-10 0-18Z"/>
+  </g>
+</svg>
