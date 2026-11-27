@@ -23,7 +23,7 @@ SOFTWARE.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="450" height="219" viewBox="0 0 450 219" fill="none" role="img" aria-labelledby="title desc">
 <title id="title">Weekly rhythm</title>
-<desc id="desc">Contributions per weekday over the last 12 months: Mon 756, Tue 580, Wed 665, Thu 677, Fri 764, Sat 1757, Sun 696. Busiest: Sat. Quietest: Tue. On weekdays: 58%.</desc>
+<desc id="desc">Contributions per weekday over the last 12 months: Mon 756, Tue 580, Wed 665, Thu 677, Fri 765, Sat 1757, Sun 696. Busiest: Sat. Quietest: Tue. On weekdays: 58%.</desc>
 <style>
   .wspall { animation: wspall 10.6s infinite; }
   @keyframes wspall { 0.000% { opacity: 0; } 5.660% { opacity: 0; animation-timing-function: steps(1, end); } 5.670% { opacity: 1; } 99.991% { opacity: 1; animation-timing-function: steps(1, end); } 100.000% { opacity: 0; } }
