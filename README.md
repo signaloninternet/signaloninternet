@@ -45,7 +45,7 @@ Built a PDF study companion that keeps the original file on-device and sends sel
 - **Payments and delivery** · Stripe Connect, Stripe Terminal, webhooks, AWS, GitHub Actions
 
 <details>
-<summary>5,896 GitHub contributions in the last year</summary> <!-- github-contributions -->
+<summary>5,908 GitHub contributions in the last year</summary> <!-- github-contributions -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/weekly-dark.svg">
